@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="lubricationsystem.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+        
+    <section class="about-us" id="about-us">
+      <section class="content-section">
+          <div class="text-container">
+      <h1>Lubrication System</h1>
+      <p>
+        At BM Hydromech, we manufacture advanced lubrication systems designed to not only reduce friction and wear but also ensure optimal performance through filtration and cooling of oil. Our systems deliver precision lubrication while maintaining the cleanliness and temperature of the oil, enhancing the efficiency and reliability of your machinery.
+    </p>
+    <p>
+        Our lubrication systems are equipped with high-efficiency filters that remove contaminants, debris, and particles from the oil.
+        Prevents wear and tear caused by abrasive particles, ensuring the longevity of critical components.
+    </p>
+    <p>Designed to dissipate heat generated during machine operations, keeping the oil at an optimal temperature.
+        Prevents overheating, which can degrade oil quality and affect machinery performance.</p>
+      </div>
+  </section>
+   <!--     <div class="image">
+            <img src="lubrication1.jpeg" alt="Hydraulic System">
+        </div>-->
+    </div>
+    </section>
+    <section class="photoslider">
+        <div class="slider">
+            <div class="slides">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <img src="lubrication1.jpeg" alt="Image 1">
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <img src="lubrication2.jpeg" alt="Image 2">
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <img src="lubrication3.jpeg" alt="Image 3">
+              </div>
+              <!--Slide 4-->
+              <div class="slide">
+                <img src="lubrication4.jpeg" alt="Image 3">
+              </div>
+            </div>
+            <!-- Navigation Arrows -->
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+          </div>
+    </section>
+    <script>
+        let currentSlide = 0;
+
+function showSlide(index) {
+  const slides = document.querySelector('.slides');
+  const totalSlides = document.querySelectorAll('.slide').length;
+
+  // Wrap around the slides
+  if (index >= totalSlides) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = totalSlides - 1;
+  } else {
+    currentSlide = index;
+  }
+
+  // Shift the slides
+  slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+// Auto-slide (optional)
+setInterval(() => {
+  nextSlide();
+}, 5000); // Change slide every 5 seconds
+
+    </script>
+     <footer>
+        <p>&copy; 2025 BM Hydromech. All rights reserved.</p>
+        <p></p>
+    </footer>
+    </body>
+</html>

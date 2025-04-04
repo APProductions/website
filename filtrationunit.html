@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="filtrationunit.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+                  <!--ABout US Section-->
+    <section class="about-us" id="about-us">
+      <section class="content-section">
+          <div class="text-container">
+      <h1>Filteration Unit</h1>
+      <p>
+        At BM Hydromech, we specialize in manufacturing custom oil filtration units tailored to meet the unique requirements of our clients. Whether you need filtration systems for hydraulic oil, lubricating oil, transformer oil, or industrial fluids, we design and build solutions that ensure maximum efficiency and reliability. Our expert engineering team works closely with customers to develop high-performance filtration systems with advanced features such as multi-stage filtration.
+    </p>  
+     <p>
+        With a commitment to quality, durability, and innovation, we provide custom-built filtration solutions for industries like power plants, manufacturing, automotive, and heavy machinery. No matter the capacity, flow rate, or contamination level, BMHYDROMECH delivers efficient, cost-effective, and high-quality filtration units to enhance equipment performance and longevity. Contact us today to get a bespoke filtration solution designed for your specific needs.  
+    </p>
+      </div>
+    <section class="photoslider">
+        <div class="slider">
+            <div class="slides">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <img src="filt1.jpeg" alt="Image 1">
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <img src="filt2.jpeg" alt="Image 2">
+              </div>
+               <!-- Slide 3 -->
+               <div class="slide">
+                <img src="filt3.jpeg" alt="Image 2">
+              </div>
+               <!-- Slide 4 -->
+               <div class="slide">
+                <img src="filt4.jpeg" alt="Image 2">
+              </div>
+            </div>
+       
+            <!-- Navigation Arrows -->
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+          </div>
+    </section>
+    <script>
+        let currentSlide = 0;
+
+function showSlide(index) {
+  const slides = document.querySelector('.slides');
+  const totalSlides = document.querySelectorAll('.slide').length;
+
+  // Wrap around the slides
+  if (index >= totalSlides) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = totalSlides - 1;
+  } else {
+    currentSlide = index;
+  }
+
+  // Shift the slides
+  slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+// Auto-slide (optional)
+setInterval(() => {
+  nextSlide();
+}, 5000); // Change slide every 5 seconds
+
+    </script>
+      <footer>
+        <div class="footer-top">
+            <div class="address">
+                <p><strong>BM Hydromech</strong></p>
+                <p>Plot No-27/1/2/2, Near Hotel Relax Kharadi industrial Area,Kharadi, Pune - 412308</p>
+            </div>
+            <div class="email">
+                <img src="https://www.gstatic.com/images/branding/product/1x/gmail_2020q4_32dp.png" alt="Gmail Logo">
+                <a href="mailto:bmhydromech@gmail.com" style="color: white; text-decoration: none;">bmhydromech@gmail.com</a>
+         </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 BM Hydromech. All rights reserved.
+        </div>
+    </footer>
+    </body>
+</html>

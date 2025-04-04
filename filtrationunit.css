@@ -1,0 +1,147 @@
+/* General Styles */
+h1 {
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.first {
+    background-color: rgb(217, 212, 212);
+    height: 100vh;
+}
+.text-container{
+    background-color: #f4f4f4;
+}
+
+
+p {
+    font-size: 1.25rem; 
+    color: #555; 
+    max-width: 800px;
+    margin: 0 auto; 
+    line-height: 1.8;
+}
+
+
+/* Media Queries */
+
+/* For small devices (phones) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem; /* Reduce font size for headings */
+        margin-top: 50px;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .side-by-side {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .side-by-side .text {
+        margin-left: 0; /* Remove left margin for smaller screens */
+        margin-bottom: 20px; /* Add spacing between elements */
+    }
+
+    .side-by-side img {
+        max-width: 90%; /* Adjust image size for smaller screens */
+    }
+}
+
+/* For tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    h1 {
+        font-size: 2rem; /* Adjust heading size for tablets */
+        margin-top: 70px;
+    }
+
+    p {
+        font-size: 1.125rem; /* Adjust font size slightly smaller for tablets */
+    }
+
+    .side-by-side {
+        gap: 30px; /* Increase spacing between elements */
+    }
+
+    .side-by-side .text {
+        margin-left: 20px; /* Reduce left margin for tablets */
+    }
+
+    .side-by-side img {
+        max-width: 80%; /* Adjust image size */
+    }
+}
+
+/* For laptops and larger screens */
+@media (min-width: 1025px) {
+    .side-by-side {
+        flex-direction: row; /* Keep content side-by-side */
+        gap: 40px; /* Add more spacing for larger screens */
+    }
+
+    .side-by-side .text {
+        margin-left: 40px; /* Maintain left margin for larger screens */
+    }
+
+    .side-by-side img {
+        max-width: 70%; /* Set default image size for larger screens */
+    }
+}
+/* Slider container */
+.slider {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Slides wrapper */
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Individual slides */
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Slide images */
+  .slide img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Navigation buttons */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
