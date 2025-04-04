@@ -243,6 +243,7 @@ span.num{
       flex-direction: column;
       align-items: flex-start;
       padding: 10px;
+      height:20%;
   }
 
   .navbar ul {
